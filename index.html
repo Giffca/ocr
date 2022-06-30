@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>OCR</title>
+    
+</head>
+<body>
+
+<div id="app">
+    <div class="ocr-div">
+        <div class="ocr-label">
+            OCR
+        </div>
+        <div class="ocr-value">
+            {{ OCR }}
+        </div>
+    </div>
+    <div class="faktura-div">
+        <div class="faktura-label">
+            Fakturanummer
+        </div>
+        <div >
+            <input class="faktura-value" type=number v-model="Faktura" @keydown="calcOCR()" @change="calcOCR()">
+        </div>
+    </div>
+</div>
+
+    <script src="https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
